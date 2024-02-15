@@ -1,0 +1,125 @@
+#title {
+  height: calc(100%);
+  position: relative;
+  min-height: 800px;
+  padding-top: 150px;
+  box-sizing: border-box;
+  overflow : hidden;
+
+}
+#title::before{
+  content: "";
+  width: 53%;
+  height: 280px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,155,250,0.8);
+  border-radius: 0 300px 0 0;
+  animation-name: moveR;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+@keyframes moveR{
+  0%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+#title>a{
+}
+#title>a::before{
+  content: "";
+  background-image: url(../img/mainobject2.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: contain;
+  width: 244px;
+  height: 354px;
+  display: block;
+  position: absolute;
+  bottom:0;
+  left:51%;
+  z-index: 1;
+  animation-name: sideUP;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  animation-delay: 0.7s;
+  transform: translateY(100%);
+  animation-fill-mode: forwards;
+}
+@keyframes sideUP{
+  from{
+     transform: translateY(0);
+  }
+  to{
+     transform: translateY(100%);
+  }
+}
+
+
+
+
+#title a .wrap {
+  /*! padding-top: 30px; */
+  animation-name: titleT;
+  animation-duration: 1s;
+  animation-delay: 0.5;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+@keyframes titleT{
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(80%);
+  }
+}
+
+#title a .wrap h2 {
+  font-weight: 200;
+  /*! line-height: 45px; */
+  font-size: 60px;
+}
+#title a .wrap p.p {
+
+  color: #555;
+  padding-top: 20px;
+}
+#title::after{
+  content: "";
+  width: 53%;
+  height: 280px;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,44,157,0.8);
+  border-radius: 300px 0 0 0;
+  animation-name: moveL;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}
+@keyframes moveL{
+  0%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+
